@@ -15,7 +15,7 @@ import { LightShaft } from "../objects/LightShaft";
 const pos = new THREE.Vector3();
 const target = new THREE.Vector3();
 
-/** "Le cose più belle iniziano con un piccolo gesto." — bouquet sospeso nello spazio. */
+/** "Un pomeriggio. Una città. Noi due." — bouquet sospeso nello spazio. */
 export function BouquetScene() {
   const tier = useUI((s) => s.tier);
   const group = useRef<THREE.Group>(null);

@@ -11,7 +11,7 @@ import { selectReducedMotion, useUI, type SectionId } from "@/lib/store";
 
 const CHAPTERS: Record<SectionId, string> = {
   hero: "L’inizio del viaggio",
-  intro: "Un piccolo gesto",
+  intro: "Noi due",
   timeline: "Il nostro pomeriggio",
   map: "La mappa",
   finale: "Per te",
@@ -243,7 +243,7 @@ export function TopBar() {
                   <MenuLink n="·" title="L’inizio" sub="Como · 21 novembre 2026" onClick={() => go(() => 0)} />
                 </li>
                 <li>
-                  <MenuLink n="·" title="Un piccolo gesto" sub="Le cose più belle" onClick={() => go(() => sectionScrollY("intro") + scrollState.vh * 0.3)} />
+                  <MenuLink n="·" title="Noi due" sub="Un pomeriggio, una città" onClick={() => go(() => sectionScrollY("intro") + scrollState.vh * 0.3)} />
                 </li>
                 {STAGES.map((s) => (
                   <li key={s.id}>

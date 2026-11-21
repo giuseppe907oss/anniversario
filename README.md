@@ -54,7 +54,7 @@ d’ambiente né chiavi API.
 | --- | --- |
 | **Apertura** | Loader con la frase-concept mentre gli shader vengono compilati. |
 | **Hero** | Lago prealpino al crepuscolo. L’acqua riflette davvero (riflessione planare), il cielo passa dal tramonto alla notte e le luci della costa si accendono una alla volta. «Scopri la nostra serata» porta la camera verso la città. |
-| **Un piccolo gesto** | Bouquet procedurale (rose cipria e bianche, eucalipto, nebbiolina, carta e nastro bordeaux) sospeso in un fascio di luce, con petali che fluttuano, e la frase «Le cose più belle iniziano con un piccolo gesto». È solo un’immagine: nel programma non c’è una tappa dal fiorista. |
+| **Noi due** | Bouquet procedurale (rose cipria e bianche, eucalipto, nebbiolina, carta e nastro bordeaux) sospeso in un fascio di luce, con petali che fluttuano, e la frase-concept «Un pomeriggio. Una città. Noi due.». È solo un’immagine: nel testo non ci sono riferimenti a regali. |
 | **Timeline 3D** | Cinque tappe lungo un percorso curvo collegato da un filo di luce. La camera rallenta su ogni tappa e la luce segue l’orario: 01 mappa stilizzata di Como con il parcheggio · 02 Duomo stilizzato in orbita · 03 due calici di Spritz che si sfiorano · 04 lago notturno con il Tempio Voltiano · 05 tavolo per due con candela (**prenotazione confermata**). |
 | **Mappa reale** | Leaflet con tile OpenStreetMap e il percorso pedonale vero tra le 8 tappe. Ogni tappa si può selezionare e ha i suoi link per Google Maps. |
 | **Finale** | «Non importa dove andiamo…» e «Buon anniversario, Milena.» tra particelle d’oro. |
