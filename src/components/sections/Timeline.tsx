@@ -1,6 +1,6 @@
 "use client";
 
-import { CalendarCheck, Flower2, MapPin, Navigation, Search } from "lucide-react";
+import { CalendarCheck, MapPin, Navigation } from "lucide-react";
 import { STAGES, type Stage } from "@/lib/content";
 import { charsIn, fadeUp, gsap, maskIn, useGsap } from "@/lib/motion";
 import { MagneticButton } from "../ui/MagneticButton";
@@ -12,12 +12,6 @@ function StatusBadge({ stage }: { stage: Stage }) {
     return (
       <span className="inline-flex items-center gap-1.5 rounded-full border border-champagne/40 bg-champagne/10 px-3 py-1 text-[0.68rem] tracking-[0.14em] text-champagne uppercase">
         <CalendarCheck size={12} strokeWidth={2} /> Prenotazione confermata
-      </span>
-    );
-  if (stage.status === "tobechosen")
-    return (
-      <span className="inline-flex items-center gap-1.5 rounded-full border border-ivory/15 px-3 py-1 text-[0.68rem] tracking-[0.14em] text-ivory/60 uppercase">
-        <Flower2 size={12} strokeWidth={2} /> {stage.note}
       </span>
     );
   return null;
@@ -35,7 +29,7 @@ function StageCard({ stage, now }: { stage: Stage; now: boolean }) {
     tl.add(fadeUp(el.querySelectorAll("[data-fade]"), reduced, { stagger: 0.07 }), 0.45);
   });
 
-  const Icon = stage.status === "tobechosen" ? Search : Navigation;
+  const Icon = Navigation;
 
   return (
     <div
@@ -64,25 +58,19 @@ function StageCard({ stage, now }: { stage: Stage; now: boolean }) {
           </div>
         </div>
 
-        <div className={`mt-3 gap-3 sm:block ${stage.time ? "flex items-end justify-between" : "block"}`}>
+        <div className="mt-3 flex items-end justify-between gap-3 sm:block">
           <div data-time className="flex items-baseline gap-2 sm:gap-3">
-            {stage.time ? (
-              <>
-                <SplitText as="span" text={stage.time} className="nums font-serif text-[3rem] leading-none font-light text-ivory sm:text-7xl" />
-                {stage.timeEnd && (
-                  <span className="nums font-serif text-xl text-ivory/50 sm:text-2xl">
-                    <SplitText text={`– ${stage.timeEnd}`} />
-                  </span>
-                )}
-              </>
-            ) : (
-              <SplitText as="span" text={stage.timeLabel ?? ""} className="font-serif text-[1.9rem] leading-none font-light text-ivory italic sm:text-5xl" />
+            <SplitText as="span" text={stage.time} className="nums font-serif text-[3rem] leading-none font-light text-ivory sm:text-7xl" />
+            {stage.timeEnd && (
+              <span className="nums font-serif text-xl text-ivory/50 sm:text-2xl">
+                <SplitText text={`– ${stage.timeEnd}`} />
+              </span>
             )}
           </div>
           <h3
             id={`stage-title-${stage.index}`}
             data-title
-            className={`shrink-0 text-[0.68rem] tracking-[0.26em] text-champagne uppercase sm:mt-3 sm:pb-0 sm:text-left sm:text-[0.78rem] sm:tracking-[0.3em] ${stage.time ? "pb-1 text-right" : "mt-2"}`}
+            className={`shrink-0 text-[0.68rem] tracking-[0.26em] text-champagne uppercase sm:mt-3 sm:pb-0 sm:text-left sm:text-[0.78rem] sm:tracking-[0.3em] pb-1 text-right`}
           >
             <SplitText text={stage.title} />
           </h3>
@@ -154,7 +142,7 @@ export function Timeline() {
           <SplitText text="Il nostro pomeriggio" />
         </h2>
         <p data-fade className="mt-5 max-w-[30ch] text-[0.95rem] text-ivory/60">
-          Da Varese al lago, sei tappe unite da un solo filo di luce.
+          Da Varese al lago, cinque tappe unite da un solo filo di luce.
         </p>
       </div>
       {STAGES.map((s) => (

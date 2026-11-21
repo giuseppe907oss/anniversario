@@ -60,7 +60,7 @@ export const PLACES: Record<PlaceId, Place> = {
 /*  Tappe della timeline                                               */
 /* ------------------------------------------------------------------ */
 
-export type StageStatus = "booked" | "tobechosen" | "none";
+export type StageStatus = "booked" | "none";
 
 export interface StageAction {
   label: string;
@@ -76,8 +76,6 @@ export interface Stage {
   /** Orario mostrato in grande. */
   time: string;
   timeEnd?: string;
-  /** Testo alternativo quando non c'è un orario preciso. */
-  timeLabel?: string;
   /** Finestra (minuti dalla mezzanotte, ora di Roma) per l'indicatore "adesso". */
   window?: [number, number];
   location: string;
@@ -87,30 +85,13 @@ export interface Stage {
   status: StageStatus;
   places: PlaceId[];
   actions: StageAction[];
-  note?: string;
 }
 
 export const STAGES: Stage[] = [
   {
-    id: "bouquet",
+    id: "arrivo",
     index: 0,
     number: "01",
-    title: "Il bouquet",
-    time: "",
-    timeLabel: "Prima della partenza",
-    location: "Un fiorista a Varese",
-    address: "Varese — negozio ancora da scegliere",
-    quote: "Ogni storia merita un fiore.",
-    body: "Prima di partire, un piccolo bouquet romantico: rose cipria, rose bianche e un soffio di verde. Il primo gesto della serata.",
-    status: "tobechosen",
-    places: [],
-    actions: [{ label: "Cerca un fiorista a Varese", href: gmaps.search("fiorista Varese"), kind: "secondary" }],
-    note: "Fiorista da scegliere",
-  },
-  {
-    id: "arrivo",
-    index: 1,
-    number: "02",
     title: "Arrivo a Como",
     time: "17:00",
     timeEnd: "17:30",
@@ -128,8 +109,8 @@ export const STAGES: Stage[] = [
   },
   {
     id: "centro",
-    index: 2,
-    number: "03",
+    index: 1,
+    number: "02",
     title: "Centro storico",
     time: "17:30",
     timeEnd: "18:20",
@@ -147,8 +128,8 @@ export const STAGES: Stage[] = [
   },
   {
     id: "aperitivo",
-    index: 3,
-    number: "04",
+    index: 2,
+    number: "03",
     title: "Aperitivo",
     time: "18:30",
     timeEnd: "19:15",
@@ -166,8 +147,8 @@ export const STAGES: Stage[] = [
   },
   {
     id: "lago",
-    index: 4,
-    number: "05",
+    index: 3,
+    number: "04",
     title: "Il lago di notte",
     time: "19:15",
     timeEnd: "20:15",
@@ -189,8 +170,8 @@ export const STAGES: Stage[] = [
   },
   {
     id: "cena",
-    index: 5,
-    number: "06",
+    index: 4,
+    number: "05",
     title: "La cena",
     time: "20:30",
     window: [20 * 60 + 30, 23 * 60 + 30],

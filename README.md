@@ -42,16 +42,16 @@ Il progetto è una normale app Next.js (App Router) e la pagina è statica: si p
 | --- | --- |
 | **Apertura** | Loader con la frase-concept mentre gli shader vengono compilati. |
 | **Hero** | Lago prealpino al crepuscolo. L’acqua riflette davvero (riflessione planare), il cielo passa dal tramonto alla notte e le luci della costa si accendono una alla volta. «Scopri la nostra serata» porta la camera verso la città. |
-| **La sorpresa** | Bouquet procedurale (rose cipria e bianche, eucalipto, nebbiolina, carta e nastro bordeaux) sospeso in un fascio di luce, con petali che fluttuano. |
-| **Timeline 3D** | Sei tappe lungo un percorso curvo collegato da un filo di luce. La camera rallenta su ogni tappa e la luce segue l’orario: 01 bouquet · 02 mappa stilizzata di Como con il parcheggio · 03 Duomo stilizzato in orbita · 04 due calici di Spritz che si sfiorano · 05 lago notturno con il Tempio Voltiano · 06 tavolo per due con candela (**prenotazione confermata**). |
+| **Un piccolo gesto** | Bouquet procedurale (rose cipria e bianche, eucalipto, nebbiolina, carta e nastro bordeaux) sospeso in un fascio di luce, con petali che fluttuano, e la frase «Le cose più belle iniziano con un piccolo gesto». È solo un’immagine: nel programma non c’è una tappa dal fiorista. |
+| **Timeline 3D** | Cinque tappe lungo un percorso curvo collegato da un filo di luce. La camera rallenta su ogni tappa e la luce segue l’orario: 01 mappa stilizzata di Como con il parcheggio · 02 Duomo stilizzato in orbita · 03 due calici di Spritz che si sfiorano · 04 lago notturno con il Tempio Voltiano · 05 tavolo per due con candela (**prenotazione confermata**). |
 | **Mappa reale** | Leaflet con tile OpenStreetMap e il percorso pedonale vero tra le 8 tappe. Ogni tappa si può selezionare e ha i suoi link per Google Maps. |
 | **Finale** | «Non importa dove andiamo…» e «Buon anniversario, Milena.» tra particelle d’oro. |
 
 ### Interazioni
 
-- **Modalità viaggio**: il pulsante «Inizia il nostro viaggio» (nella sorpresa e nel menu) fa scorrere la storia da sola,
+- **Modalità viaggio**: il pulsante «Inizia il nostro viaggio» (sotto il bouquet e nel menu) fa scorrere la storia da sola,
   con una pausa su ogni tappa. Basta toccare o scorrere per interromperla.
-- **Timeline navigabile**: la barra 01–06 (in alto su iPhone, a destra su desktop) e il menu portano direttamente a una tappa.
+- **Timeline navigabile**: la barra 01–05 (in alto su iPhone, a destra su desktop) e il menu portano direttamente a una tappa.
 - **Schede delle tappe**: per ognuna ci sono orario, luogo, indirizzo, una descrizione e i pulsanti di navigazione.
 - **Colonna sonora**: si accende solo toccando «Musica» e non parte mai da sola. È generata in tempo reale con la Web Audio API:
   pad in Re maggiore, note di celesta e un fruscio d’acqua. Quando i calici si toccano si sente un piccolo «tin».
@@ -117,7 +117,6 @@ fedeli; il sito lo dice dove serve. La mappa per orientarsi davvero è quella de
 Stato delle prenotazioni, come richiesto:
 - **Cena — Locanda in Centro, 20:30: prenotata.** È l’unica con il badge «Prenotazione confermata».
 - Aperitivo da Silk: **nessuna prenotazione indicata**.
-- Fiorista a Varese: **ancora da scegliere**. Il pulsante cerca i fioristi di Varese su Google Maps.
 
 ---
 

@@ -79,7 +79,7 @@ export async function startJourney() {
 
 /**
  * CTA dell'hero: la camera "si tuffa" verso la città, dissolvenza,
- * e il racconto riprende dalla sorpresa del bouquet.
+ * e il racconto riprende dal bouquet.
  */
 export function diveIntoStory() {
   const ui = useUI.getState();
