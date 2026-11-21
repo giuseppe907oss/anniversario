@@ -14,7 +14,6 @@ export const metadata: Metadata = {
   description: "Un pomeriggio. Una città. Noi due. Giuseppe & Milena · Como, 21 novembre 2026.",
   robots: { index: false, follow: false },
   appleWebApp: { capable: true, title: "Como", statusBarStyle: "black-translucent" },
-  icons: { icon: "/icon.svg", apple: "/icon.svg" },
 };
 
 export const viewport: Viewport = {

@@ -1,0 +1,43 @@
+name: Pubblica su GitHub Pages
+
+on:
+  push:
+    branches: [main, claude/como-romantic-3d-qmbokw]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Export statico
+        run: npm run build:pages
+        env:
+          NEXT_TELEMETRY_DISABLED: "1"
+          PAGES_BASE_PATH: /${{ github.event.repository.name }}
+
+      - name: Pubblica sul branch gh-pages
+        run: |
+          touch out/.nojekyll
+          cd out
+          git init -q -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Pubblicazione ${GITHUB_SHA::7}"
+          git push -f -q "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" gh-pages

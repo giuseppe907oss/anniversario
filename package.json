@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:pages": "GITHUB_PAGES=true next build",
     "start": "next start",
     "lint": "tsc --noEmit",
     "route:fetch": "node scripts/fetch-route.mjs"

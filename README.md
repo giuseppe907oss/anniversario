@@ -29,10 +29,22 @@ npm run start      # → http://localhost:3000
 Per provarlo sull’iPhone mentre sviluppi: telefono e computer sulla stessa Wi‑Fi, poi
 `npx next dev -H 0.0.0.0` e apri `http://<IP-del-computer>:3000`.
 
-### Pubblicazione
+### Pubblicazione su GitHub Pages
 
-Il progetto è una normale app Next.js (App Router) e la pagina è statica: si può pubblicare su Vercel così com’è
-(importa il repository e lascia le impostazioni predefinite). Non servono variabili d’ambiente né chiavi API.
+Il workflow `.github/workflows/pages.yml` parte a ogni push su `main` (o sul branch di lavoro). Esporta il sito come file
+statici (`npm run build:pages`) e lo pubblica sul branch `gh-pages`. Per attivarlo serve una sola configurazione, da fare
+una volta: **Settings → Pages → Build and deployment → Source: «Deploy from a branch» → Branch: `gh-pages` / `(root)`**.
+
+Il sito sarà poi su `https://<utente>.github.io/anniversario/`.
+
+- Sul piano GitHub gratuito, Pages funziona solo con **repository pubblici**. Per un repository privato serve GitHub Pro.
+- In ogni caso il sito pubblicato è raggiungibile da chiunque abbia il link. Ai motori di ricerca chiediamo di non
+  indicizzarlo (`noindex`).
+
+### Altre opzioni
+
+Essendo una normale app Next.js con pagina statica, si può pubblicare anche su Vercel così com’è. Non servono variabili
+d’ambiente né chiavi API.
 
 ---
 
