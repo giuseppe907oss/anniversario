@@ -1,0 +1,10 @@
+{
+  "_source": "OpenStreetMap via Nominatim (https://nominatim.openstreetmap.org), consultato il 21/11/2026. © OpenStreetMap contributors, ODbL.",
+  "valduce":   { "lat": 45.8106559, "lng": 9.0867782, "precision": "exact", "osm": "Autosilo Valduce, Viale Lecco 9a" },
+  "duomo":     { "lat": 45.8117680, "lng": 9.0836622, "precision": "exact", "osm": "Duomo di Como, Piazza del Duomo" },
+  "sanfedele": { "lat": 45.8095579, "lng": 9.0840928, "precision": "exact", "osm": "Piazza San Fedele" },
+  "silk":      { "lat": 45.8084164, "lng": 9.0823697, "precision": "street", "osm": "Via Armando Diaz (il locale non è presente su OpenStreetMap: punto sulla via)" },
+  "cavour":    { "lat": 45.8130357, "lng": 9.0809691, "precision": "exact", "osm": "Piazza Cavour" },
+  "voltiano":  { "lat": 45.8148324, "lng": 9.0752526, "precision": "exact", "osm": "Tempio Voltiano, Viale Guglielmo Marconi" },
+  "locanda":   { "lat": 45.8114443, "lng": 9.0785439, "precision": "exact", "osm": "Locanda in Centro (OSM)" }
+}
